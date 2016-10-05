@@ -1,0 +1,23 @@
+# coerce-cljc
+
+A Clojure/ClojureScript library for coercing simple values to another
+type, ie, strings to dates, strings to integers, dates to strings,
+etc.
+
+The goal is to have single function (coerce ...) that will 'do the
+right most of the time' and allow for overriding for specific use
+cases.
+
+This library is opinionated, for example anywhere it can reduce a
+coercion to nil it will to so.  I find this the sanest approach, YMMV.
+
+## Usage
+
+FIXME
+
+## License
+
+Copyright © 2016 Oberon Systems P/L
+
+Distributed under the Eclipse Public License either version 1.0 or (at
+your option) any later version.
