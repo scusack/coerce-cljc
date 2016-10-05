@@ -1,5 +1,7 @@
 # coerce-cljc
 
+[![Clojars Project](https://img.shields.io/clojars/v/coerce-cljc.svg)](https://clojars.org/coerce-cljc)
+
 A Clojure/ClojureScript library for coercing simple values to another
 type, ie, strings to dates, strings to integers, dates to strings,
 etc.
