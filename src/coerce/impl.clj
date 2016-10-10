@@ -165,6 +165,14 @@
   Coerce->Decimal    (coerce->decimal     [v _] (float  v))
   Coerce->BigDecimal (coerce->big-decimal [v _] (bigdec v)))
 
+(extend-type java.lang.Long
+  Coerce->String     (coerce->string      [v _] (str v))
+  Coerce->Integer    (coerce->integer     [v _] v)
+  Coerce->BigInteger (coerce->big-integer [v _] (bigint v))
+  ;;
+  Coerce->Decimal    (coerce->decimal     [v _] (float  v))
+  Coerce->BigDecimal (coerce->big-decimal [v _] (bigdec v)))
+
 ;;;
 
 (extend-type java.math.BigInteger

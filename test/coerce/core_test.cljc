@@ -51,6 +51,10 @@
     (is (-> (coerce "not" :boolean) true?))))
 
 (deftest number-coercions
+  (testing "Numbers to Strings"
+    (is (-> (coerce (int  42) :string) (= "42")))
+    (is (-> (coerce (long 42) :string) (= "42"))))
+
   (testing "Strings To Number values"
 
     (is (-> (coerce "42" :integer)     (= 42)))
