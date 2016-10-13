@@ -210,6 +210,9 @@
   Coerce->String  (coerce->string  [v _] (name v))
   Coerce->Keyword (coerce->keyword [v _] v))
 
+(extend-type clojure.lang.Symbol
+  Coerce->String  (coerce->string  [v _] (name v)))
+
 (extend-type java.util.UUID
   Coerce->String (coerce->string [v _] (str v)))
 

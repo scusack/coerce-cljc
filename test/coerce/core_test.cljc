@@ -96,6 +96,10 @@
     (is (= (coerce "This is a Test"          :keyword) :this-is-a-test))
     (is (= (coerce "This   \tIs A  \t  Test" :keyword) :this-is-a-test))))
 
+(deftest symbol-coercions
+  (testing "Symbols to Strings"
+    (is (= (coerce 'this-is-a-test :string) "this-is-a-test"))))
+
 (deftest uuid-coercions
   (testing "Strings to UUIDs"
     (is (= (coerce "cf20e1dc-861a-11e6-ae22-56b6b6499611" :uuid) #uuid "cf20e1dc-861a-11e6-ae22-56b6b6499611"))

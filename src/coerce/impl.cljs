@@ -148,6 +148,10 @@
 
 ;;;
 
+(extend-type number
+  Coerce->String
+  (coerce->string [v _] (str v)))
+
 (extend-type js/Date
   Coerce->String
   (coerce->string
@@ -163,6 +167,9 @@
 (extend-type Keyword
   Coerce->String  (coerce->string  [v _] (name v))
   Coerce->Keyword (coerce->keyword [v _] v))
+
+(extend-type Symbol
+  Coerce->String  (coerce->string  [v _] (name v)))
 
 (extend-type cljs.core/UUID
   Coerce->String  (coerce->string [v _] (str v)))
